@@ -25,7 +25,11 @@ function dibujarPersonaje(){
 function moverIzquierda(){
     personajeX=personajeX-10;
     actualizarPantalla();
+}
 
+function moverDerecha(){
+    personajeX=personajeX+10;
+    actualizarPantalla();
 }
 
 function actualizarPantalla(){
