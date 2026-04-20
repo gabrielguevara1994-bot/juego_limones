@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>Caza Estrellas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="limones.css"/>
   <script src="utils.js"></script>
- 
 </head>
 <body onload="iniciar()">
   <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones ..... </p>
-    <h2>Autor:Gabriel Endara</h2>
+    
+    <header class="header-juego">
+      <div class="logo-y-titulo">
+        <div class="contendor-logo">
+          <img src="logo.jpg" alt="Logo del Club" class="logo-club">
+        </div>
+        <div class="textos-titulo">
+          <h1>Caza Estrellas</h1>
+          <p class="subtitulo">Atrapar Limones</p>
+          <p class="autor">Por: Gabriel Endara</p>
+        </div>
+      </div>
+    </header>
+
     <canvas id="areaJuego" width="600" height="400"></canvas>
+
     <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas: <span id="txtVidas">3</span></p>
+      <div class="stat">
+        <span class="label">Puntaje</span>
+        <span id="txtPuntaje" class="valor">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Vidas</span>
+        <span id="txtVidas" class="valor">3</span>
+      </div>
     </div>
+
     <div class="botones">
-      <button onclick="moverIzquierda();">Izquierda</button>
-      <button onclick="moverDerecha();">Derecha</button>
-      <button>Reiniciar</button>
+      <button onclick="moverIzquierda();">⬅ Izquierda</button>
+      <button onclick="moverDerecha();">Derecha ➡</button>
+      <button class="btn-reiniciar" onclick="location.reload();">Reiniciar</button>
     </div>
   </div>
   <script src="limones.js"></script>
