@@ -7,7 +7,7 @@ const ANCHO_PERSONAJE=40
 
 const ANCHO_LIMON=20
 const ALTO_LIMON=20
-let personajeX=canvas.width/2
+let personajeX=canvas.width-ANCHO_PERSONAJE
 let personajeY=canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE);
 let limonX=canvas.width/2
 let limonY=0
@@ -35,13 +35,13 @@ function dibujarPersonaje(){
 }
 
 function moverIzquierda(){
-    personajeX=personajeX-10;
+    personajeX=0
     actualizarPantalla();
     
 }
 
 function moverDerecha(){
-    personajeX=personajeX+10;
+    personajeX=(canvas.width-ANCHO_PERSONAJE);
     actualizarPantalla();
     
 }
@@ -63,7 +63,7 @@ function dibujarLimon(){
 }
 
 function bajarLimon(){
-    limonY=limonY+10;
+    limonY=limonY+20;
     dibujarLimon();
     actualizarPantalla();
     detectarAtrapado();
